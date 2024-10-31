@@ -6,7 +6,7 @@ public class PruebaAudioVisual {
         System.out.println("Hello from Eclipse!");
 
         // Crear instancias de las subclases
-        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[3];
+        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[6];
         
         Pelicula pelicula = new Pelicula("Avatar", 125, "Accion", "20th Century Studios");
         Actor actor1 = new Actor("Sam Worthington",48,"Australiano");
@@ -28,6 +28,13 @@ public class PruebaAudioVisual {
         documental.agregarInvestigador(investigador2);
         documental.agregarInvestigador(investigador3);
         contenidos[2] = documental;
+        
+        contenidos[3] = new Animacion("Los Simpson",25,"Comedia","2D","Caricaturesco",
+        		"Todo tipo de público","Gracie Films 20th Television Animation");
+        contenidos[4] = new Videojuego("The Last of Us",1200,"Acción, Aventura, Survival Horror",
+        		"Play Station 3, Play Station 4, Play Station 5, PC","Realista","Si");
+        contenidos[5] = new Podcast("The Wild Project","Jordi Wild","Dani el Rojo",165,"Sociedad y Cultura",
+        		2023,"Español","Dani el Rojo");
 
         // Mostrar los detalles de cada contenido audiovisual
         for (ContenidoAudiovisual contenido : contenidos) {

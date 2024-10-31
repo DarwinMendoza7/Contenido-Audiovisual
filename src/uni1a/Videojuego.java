@@ -1,5 +1,6 @@
 package uni1a;
 
+//Subclase Videojuego que extiende de ContenidoAudiovisual
 public class Videojuego extends ContenidoAudiovisual {
 
 	private String plataforma;
@@ -39,7 +40,9 @@ public class Videojuego extends ContenidoAudiovisual {
 	}
 	
 	public void mostrarDetalles() {
-		System.out.println("Detalles de los Videojuegos :");
+		System.out.println("------------------------------------------");
+		System.out.println("Detalles de los Videojuegos: ");
+		System.out.println("------------------------------------------");
 		System.out.println("ID: " + getId());
 		System.out.println("Título: " + getTitulo());
 		System.out.println("Duración aproximada en minutos: " + getDuracionEnMinutos());
@@ -47,6 +50,7 @@ public class Videojuego extends ContenidoAudiovisual {
 		System.out.println("Plataformas: " + getPlataforma());
 		System.out.println("Estilo Visual: " + getEstiloVisual());
 		System.out.println("Multijugador: " + getMultijugador());
+		System.out.println("------------------------------------------");
 		System.out.println();
 	}
 	

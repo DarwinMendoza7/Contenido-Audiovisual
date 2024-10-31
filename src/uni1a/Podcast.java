@@ -1,5 +1,6 @@
 package uni1a;
 
+//Subclase Podcast que extiende de ContenidoAudiovisual
 public class Podcast extends ContenidoAudiovisual {
 
 	private String podcast;
@@ -59,7 +60,9 @@ public class Podcast extends ContenidoAudiovisual {
 	}
 	
 	public void mostrarDetalles() {
+		System.out.println("------------------------------------------");
 		System.out.println("Detalles del Podcast: ");
+		System.out.println("------------------------------------------");
 		System.out.println("ID: " + getId());
 		System.out.println("Podcast: " + getPodcast());
 		System.out.println("Presentador: " + getPresentador());
@@ -69,6 +72,7 @@ public class Podcast extends ContenidoAudiovisual {
 		System.out.println("Año de publicación: " + getAñoPublicacion());
 		System.out.println("Idioma: " + getIdioma());
 		System.out.println("Invitados: " + getListaInvitados());
+		System.out.println("------------------------------------------");
 		System.out.println();
 		
 	}

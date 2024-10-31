@@ -8,7 +8,7 @@ import java.util.ArrayList;
 // Subclase Pelicula que extiende de ContenidoAudiovisual
 public class Pelicula extends ContenidoAudiovisual {
     private String estudio;
-    private ArrayList<Actor> actores;
+    private ArrayList<Actor> actores;  //Lista de actores en la pelicula
 
     public Pelicula(String titulo, int duracionEnMinutos, String genero, String estudio) {
         super(titulo, duracionEnMinutos, genero);
@@ -16,10 +16,12 @@ public class Pelicula extends ContenidoAudiovisual {
         this.actores = new ArrayList<>();
     }
     
+    //	Método para agregar un actor a la lista de actores
     public void agregarActor(Actor actor) {
     	actores.add(actor);
     }
     
+    //Método para obtener la lista de actores
     public ArrayList<Actor> getActores(){
     	return actores;
     }
@@ -34,17 +36,22 @@ public class Pelicula extends ContenidoAudiovisual {
     
     @Override
     public void mostrarDetalles() {
+    	System.out.println("------------------------------------------");
         System.out.println("Detalles de la película:");
+        System.out.println("------------------------------------------");
         System.out.println("ID: " + getId());
         System.out.println("Título: " + getTitulo());
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
         System.out.println("Estudio: " + estudio);
+        System.out.println("------------------------------------------");
         System.out.println("Datos de los actores: ");
+        System.out.println("------------------------------------------");
         for(Actor actor: actores) {
         	System.out.println("Nombre: "  + actor.getNombre());
         	System.out.println("Edad: " + actor.getEdad());
         	System.out.println("Ncionalidad: " + actor.getNacionalidad());
+        	System.out.println("------------------------------------------");
         }
         System.out.println();
     }

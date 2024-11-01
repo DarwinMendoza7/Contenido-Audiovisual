@@ -13,14 +13,14 @@ El propósito principal es proporcionar una aplicación que permite a los usuari
 **3. Investigador:** Relacionada por composición con la clase Documental. Representa a un investigador que crea documentales.  
 
 ### Subclases añadidas: ###
-**1. Animacion:** Subclase de ContenidoAudiovisual que representa contenido animado.  
-**2. Videojuego:** Subclase de ContenidoAudiovisual que representa videojuegos.  
-**3. Podcast:** Subclase de ContenidoAudiovisual que representa episodios de podcast.  
+**1. Animacion:** Subclase de ContenidoAudiovisual que representa contenido animado.    
+**2. Podcast:** Subclase de ContenidoAudiovisual que representa episodios de podcast.   
+**3. Videojuego:** Subclase de ContenidoAudiovisual que representa videojuegos.    
 
 ### Funcionalidades nuevas: ###
-- Gestión de actores asociados a películas.
+- Gestión de actores asociados a películas y animaciones.
 - Gestión de temporadas asociadas a series.
-- Gestión de investigadores asociados a documentales.
+- Gestión de investigadores asociados a documentales y a podcast.
 - Métodos para agregar y listar actores, temporadas e investigadores.
 - Métodos en las nuevas subclases para manejar características específicas.
 

@@ -1,5 +1,7 @@
 package uni1a;
 
+import java.util.ArrayList;
+
 //Subclase Podcast que extiende de ContenidoAudiovisual
 public class Podcast extends ContenidoAudiovisual {
 
@@ -8,6 +10,7 @@ public class Podcast extends ContenidoAudiovisual {
 	private int añoPublicacion;
 	private String idioma;
 	private String listaInvitados;
+	private ArrayList<Investigador> investigadores;  //lista de investigadores en el podcast (Agregación con investigador)
 	
 	public Podcast(String podcast, String presentador,String titulo, int duracionEnMinutos, 
 			String genero, int añoPublicacion, String idioma, String listaInvitados) {
@@ -17,8 +20,19 @@ public class Podcast extends ContenidoAudiovisual {
 		this.añoPublicacion = añoPublicacion;
 		this.idioma = idioma;
 		this.listaInvitados = listaInvitados;
+		this.investigadores = new ArrayList<>();
 	}
 
+	 //Método para agregar un investigador a la lista de investigadores
+    public void agregarInvestigador(Investigador investigador) {
+    	investigadores.add(investigador);
+    }
+    
+    //Metodo para obtener la lista de investigadores
+    public ArrayList<Investigador> getInvestigadores(){
+    	return investigadores;
+    }
+    
 	public String getPodcast() {
 		return podcast;
 	}
@@ -60,9 +74,9 @@ public class Podcast extends ContenidoAudiovisual {
 	}
 	
 	public void mostrarDetalles() {
-		System.out.println("------------------------------------------");
+		System.out.println("--------------------------------------------------------------------");
 		System.out.println("Detalles del Podcast: ");
-		System.out.println("------------------------------------------");
+		System.out.println("--------------------------------------------------------------------");
 		System.out.println("ID: " + getId());
 		System.out.println("Podcast: " + getPodcast());
 		System.out.println("Presentador: " + getPresentador());
@@ -72,9 +86,17 @@ public class Podcast extends ContenidoAudiovisual {
 		System.out.println("Año de publicación: " + getAñoPublicacion());
 		System.out.println("Idioma: " + getIdioma());
 		System.out.println("Invitados: " + getListaInvitados());
-		System.out.println("------------------------------------------");
+		System.out.println("--------------------------------------------------------------------");
+		 System.out.println("Datos del Investigador: ");
+	        System.out.println("--------------------------------------------------------------------");
+	        for(Investigador investigador : investigadores) {
+	        	System.out.println("Nombre: " + investigador.getNombre());
+	        	System.out.println("Edad: " + investigador.getEdad());
+	        	System.out.println("Nacionalidad: " + investigador.getNacionalidad());
+	        	System.out.println("Área de especialización: " + investigador.getAreaEspecializacion());
+	        	System.out.println("--------------------------------------------------------------------");
+	        }
 		System.out.println();
-		
 	}
 	
 	
